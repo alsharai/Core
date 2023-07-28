@@ -4,7 +4,9 @@ SECRET_KEY = NotImplemented
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS: list[str] = ['*']
+CORS_ALLOW_ALL_ORIGINS = True
+CSRF_TRUSTED_ORIGINS: list[str] = []
 
 # Application definition
 
@@ -52,8 +54,14 @@ WSGI_APPLICATION = 'Core.project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/Users/aiman/Desktop/projects/CORE/db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'core',
+        'USER': 'core',
+        'PASSWORD': 'core',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+        'CONN_MAX_AGE': 600,
     }
 }
 
