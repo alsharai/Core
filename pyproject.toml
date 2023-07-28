@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "Core"
+version = "0.1.0"
+description = ""
+authors = ["Aiman Alsharai <alsharai.aiman@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django-filter = "^23.2"
+django = "^4.2.3"
+djangorestframework = "^3.14.0"
+psycopg2 = "^2.9.6"
+pyyaml = "^6.0.1"
+django-split-settings = "^1.2.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+pre-commit = "^3.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
